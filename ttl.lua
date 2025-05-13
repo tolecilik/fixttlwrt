@@ -58,17 +58,20 @@ chain mangle_prerouting_ttl65 {
             sys.call("(sleep 1; /etc/init.d/firewall restart) &")
             log("TTL 65 diaktifkan dan firewall direstart.")
         end
-e file
+
+        -- Simpan log proses ke file
         local flog = io.open(log_path, "w")
         if flog then
             flog:write(table.concat(log_lines, "\n"))
             flog:close()
         end
 
+        -- Redirect dan return biar tidak error
         http.redirect(dispatcher.build_url("admin", "network", "fixttl"))
         return
     end
 
+    -- Ambil isi log
     local status_msg = ""
     local f = io.open(log_path, "r")
     if f then
