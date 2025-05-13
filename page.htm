@@ -1,0 +1,31 @@
+<%+header%>
+
+<h2>Fix TTL 65</h2>
+
+<% if status_msg and #status_msg > 0 then %>
+    <div class="cbi-section">
+        <h3>Log Proses</h3>
+        <pre style="background:#f8f8f8;padding:10px;border:1px solid #ccc;"><%= status_msg %></pre>
+    </div>
+<% else %>
+    <div class="cbi-section">
+        <h3>Log Kosong</h3>
+        <pre style="background:#f8f8f8;padding:10px;border:1px solid #ccc;">Log tidak tersedia.</pre>
+    </div>
+<% end %>
+
+<form method="post">
+    <div class="cbi-section">
+        <% if ttl_active then %>
+            <button class="cbi-button cbi-button-remove" type="submit" name="action" value="toggle">
+                Nonaktifkan TTL
+            </button>
+        <% else %>
+            <button class="cbi-button cbi-button-apply" type="submit" name="action" value="toggle">
+                Aktifkan TTL
+            </button>
+        <% end %>
+    </div>
+</form>
+
+<%+footer%>
