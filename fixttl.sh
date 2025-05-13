@@ -33,11 +33,13 @@ function uninstall()
         rm -rf $VIEW
         rm -f $FIX
         rm -f $NFT
-        fw4 reload
 	sleep 1
+ 	echo "Firewall Restart"
+        fw4 reload
+	sleep 5
 	clear
-  echo " Uninstall Fixttl succesfully..."
-  sleep 5
+  	echo " Uninstall Fixttl succesfully..."
+  	sleep 5
   exit
 }
 
