@@ -1,3 +1,12 @@
+
+
+# Script install 
+bash -c "$(wget -qO - 'https://cdn.jsdelivr.net/gh/aryobrokollyy/huawei@main/fixset.sh')"
+
+
+
+
+
 # Script default here
 ```
 chain mangle_postrouting_ttl65 { 
