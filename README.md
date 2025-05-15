@@ -1,7 +1,7 @@
 
 
 # Script install 
-bash -c "$(wget -qO - 'https://cdn.jsdelivr.net/gh/aryobrokollyy/huawei@main/fixset.sh')"
+bash -c "$(wget -qO - '[https://github.com/tolecilik/fixttlwrt/raw/refs/heads/main/fixttl.sh](https://github.com/tolecilik/fixttlwrt/raw/refs/heads/main/fixttl.sh)')"
 
 
 
